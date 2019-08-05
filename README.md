@@ -1,0 +1,2 @@
+# WordGuessGame
+BootCamp js homework
