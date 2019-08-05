@@ -13,6 +13,15 @@ const movies = [
   "how to train your dragon",
   "home"
 ];
+
+// the array of blank spaces that will be filled will _ where movies letters would be
+let fullWord = [];
+for (let letters = 0; letters < movies.length; letters++) {
+  fullWord[letters] = "_";
+}
+let remainingLetters = movies.length;
+console.log(remainingLetters);
+
 // generates a random word from the movies array when any key is pushed
 document.onkeyup = function(event) {
   if (event.key) {
