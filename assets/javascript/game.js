@@ -29,3 +29,11 @@ document.onkeyup = function(event) {
     console.log(computerMovie);
   }
 };
+// playable functions/code goes here
+while (remainingLetters > 0) {
+  // have player guess
+  // show if guess is right or wrong
+  // If if right, the letter appears in approperate spots
+  // if wrong, the letter appears on the screen and "guesses remaining " decreases by 1
+  // if guess get to 0 game over
+}
