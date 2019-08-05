@@ -1,6 +1,6 @@
-// Listing the words/movies I want to be randomly gerated (hopefully this makes an array)
-const numberOfMovies = 11;
-let movies = [
+// Listing the words/movies I want to be randomly generated
+
+const movies = [
   "shrek",
   "sinbad",
   "prince of egypt",
@@ -13,15 +13,10 @@ let movies = [
   "how to train your dragon",
   "home"
 ];
-
-movies[9] = "rise of the guardians";
-movies[10] = "how to train your dragon";
-movies[11] = "home";
-
-function PickRandomWord(frm) {
-  // Generate a random number between 1 and NumberOfWords
-  var rnd = Math.ceil(Math.random() * NumberOfWords);
-
-  // Display the word inside the text box
-  frm.WordBox.value = words[rnd];
-}
+// generates a random word from the movies array when any key is pushed
+document.onkeyup = function(event) {
+  if (event.key) {
+    let computerMovie = movies[Math.floor(Math.random() * movies.length)];
+    console.log(computerMovie);
+  }
+};
