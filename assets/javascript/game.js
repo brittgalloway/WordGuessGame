@@ -13,6 +13,7 @@ const movies = [
   "how to train your dragon",
   "home"
 ];
+// words randomly choosen
 let computerMovie = movies[Math.floor(Math.random() * movies.length)];
 // the array of blank spaces that will be filled will _ where movies letters would be
 let answerArray = [];
@@ -23,7 +24,19 @@ let remainingLetters = computerMovie.length;
 console.log(remainingLetters);
 // prints (_) on screen
 document.getElementById("blanks").innerHTML = answerArray;
-// while (remainingLetters > 0) {}
+// game play
+// while (remainingLetters > 0) {
+// have player guess
+// show if guess is right or wrong
+// If if right, the letter appears in approperate spots
+// if wrong, the letter appears on the screen and "guesses remaining " decreases by 1
+// if guess get to 0 game over
+
+// }
+
+// ---------------------------
+// potentially discarded code
+
 // generates a random word from the movies array when any key is pushed
 // document.onkeyup = function(event) {
 //   if (event.key) {
@@ -34,11 +47,3 @@ document.getElementById("blanks").innerHTML = answerArray;
 //   }
 // };
 // playable functions/code goes here
-
-// while (remainingLetters > 0) {
-// have player guess
-// show if guess is right or wrong
-// If if right, the letter appears in approperate spots
-// if wrong, the letter appears on the screen and "guesses remaining " decreases by 1
-// if guess get to 0 game over
-// }
