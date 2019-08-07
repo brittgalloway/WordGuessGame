@@ -19,7 +19,7 @@ document.onkeyup = function(event) {
   if (keypress) {
     // words randomly choosen
     let computerMovie = movies[Math.floor(Math.random() * movies.length)];
-    console.log(computerMovie);
+    // console.log(computerMovie);
     // the array of blank spaces that will be filled will _ where movies letters would be
     let answerArray = [];
     for (let index = 0; index < computerMovie.length; index++) {
@@ -31,7 +31,7 @@ document.onkeyup = function(event) {
     // prints (_) on screen
     // console.log(answerArray);
     document.getElementById("blanks").innerHTML = answerArray;
-    while (remainingLetters > 0) {
+    if (remainingLetters > 0) {
       // user guess
       let userGuess = keypress;
       const scoreElement = document.getElementById("score");
