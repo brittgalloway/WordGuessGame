@@ -23,13 +23,13 @@ document.onkeyup = function(event) {
     let answerArray = [];
     for (let index = 0; index < computerMovie.length; index++) {
       answerArray[index] = "_";
-      console.log(answerArray);
+      //   console.log(answerArray);
     }
     let remainingLetters = computerMovie.length;
 
     // prints (_) on screen
-    console.log(answerArray);
-    // document.getElementById("blanks").innerHTML = answerArray;
+    // console.log(answerArray);
+    document.getElementById("blanks").innerHTML = answerArray;
     while (remainingLetters > 0) {
       // user guess
       let userGuess = keypress;
@@ -37,11 +37,10 @@ document.onkeyup = function(event) {
         if (computerMovie[key] === userGuess) {
           answerArray[key] = userGuess;
           remainingLetters--;
+          // Show the player their progress
+          // console.log(answerArray);
+          document.getElementById("blanks").innerHTML = answerArray.join(" ");
         }
-
-        // Show the player their progress
-        console.log(answerArray);
-        // document.getElementById("blanks").innerHTML = answerArray.join(" ");
       }
     }
   }
