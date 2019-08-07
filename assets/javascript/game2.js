@@ -44,12 +44,13 @@ document.onkeyup = function(event) {
           answerArray[key] = userGuess;
           remainingLetters--;
           // Show the player their progress
-          // console.log(answerArray);
+          console.log(answerArray);
           document.getElementById("blanks").innerHTML = answerArray.join(" ");
           //   if the guess is wrong
         } else if (computerMovie[key] != userGuess) {
           guess--;
           guessElement.textContent = "Guesses " + guess;
+          console.log(guess);
           //   if you run out of guesses and lose
         } else if (guess == 0) {
           guessElement.innerHTML = "Guesses " + guess;
@@ -60,9 +61,10 @@ document.onkeyup = function(event) {
           score++;
 
           document.getElementById("blanks").innerHTML = answerArray.join("");
-          document.getElementById("score").innerHTML = "Score " + score;
+          scoreElement.innerHTML = "Score " + score;
           document.getElementById("win").innerHTML =
             "You solved it! Can you beat them all?";
+          console.log(score);
           guess = 0;
         } else if (score == 11) {
           document.getElementById("win").innerHTML = "YOU BEAT THEM ALL!";
