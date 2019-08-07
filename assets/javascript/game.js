@@ -15,23 +15,24 @@ const movies = [
 ];
 // words randomly choosen
 let computerMovie = movies[Math.floor(Math.random() * movies.length)];
-
-//Make guess into array for easy checking
+console.log(computerMovie);
+//Make guess into array for easy checking (each word is array, the letters are the index)
 let movieChoiceArray = computerMovie.split("");
-// the array of blank spaces that will be filled will _ where movies letters would be
-let answerArray = [];
-for (let index = 0; index < computerMovie.length; index++) {
-  // Create new span
-  const letter = document.createElement("span");
-  // give span underscore as textContent
-  document.textContent = "_";
-  // give attribute to span that contains letter
+console.log(movieChoiceArray);
+//   console.log(answerArray);
+// Create new span
+let span = movieChoiceArray["_"];
+// give span underscore as textContent
 
-  // append span to some div
-}
-let remainingLetters = computerMovie.length;
+// give attribute to span that contains letter
+
+document.getElementById("blanks").appendChild(span);
+
+// // append span to some div
+// }
+// let remainingLetters = computerMovie.length;
 // prints (_) on screen
-document.getElementById("blanks").innerHTML = answerArray;
+// document.getElementById("blanks").innerHTML = answerArray;
 // game play
 // while (remainingLetters > 0) {
 // document.getElementById("blanks").innerHTML = answerArray.join("");
@@ -47,12 +48,10 @@ document.getElementById("blanks").innerHTML = answerArray;
 // potentially discarded code
 
 // key is pushed, check it against the spans in the word
-document.onkeyup = function(event) {
-  const userKey = event.key;
-  const isLetterTrue = computerMovie.includes(userKey);
-  // if true letter appears
-  if (isLetterTrue) {
-  } else {
-    //your wrong, letter apears on screen, guesses remaining decreases by 1
-  }
-};
+// document.onkeyup = function(event) {
+//   const userKey = event.key;
+//   const isLetterTrue = computerMovie.includes(userKey);
+//   // if true letter appears
+//   if (isLetterTrue) {
+//   } else {
+//     //your wrong, letter apears on screen, guesses remaining decreases by 1
