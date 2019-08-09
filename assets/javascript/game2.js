@@ -49,7 +49,7 @@ document.onkeyup = function(event) {
     // score variable
     let score = 0;
     // prints the mystery word
-    console.log(answerArray);
+    // console.log(answerArray);
     document.getElementById("blanks").textContent = answerArray.join(" ");
     // if there are more than 0 letters to guess per word/title
     if (remainingLetters > 0) {
@@ -60,19 +60,17 @@ document.onkeyup = function(event) {
         // if user choice is correct
         if (computerMovie[key] === userGuess) {
           answerArray[key] = userGuess;
-          remainingLetters--;
+
           // Show the player their progress
-          console.log(answerArray);
+          // console.log(answerArray);
           document.getElementById("blanks").textContent = answerArray.join(" ");
           //   if the guess is wrong
         } else if (computerMovie[key] != userGuess) {
-          //         // the blank stays?
-          //         answerArray[key] == computerMovie[key];
-          //         // guesses remaining (started with 5) goes down by 1
-          //         guessLeft--;
-          //         // Should print Guess 4 (if this is the 1st incorrect guess)
-          //         guessElement.textContent = "Guesses " + guessLeft;
-          //         console.log(guessLeft);
+          // guesses remaining (started with 5) goes down by 1
+          guessLeft - 1;
+          // Should print Guess 4 (if this is the 1st incorrect guess)
+          guessElement.textContent = "Guesses " + guessLeft;
+          // console.log(guessLeft);
         }
       }
 
