@@ -1,3 +1,37 @@
+nav {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  color: #777777;
+  size: 18pt;
+  margin-left: 500px;
+  padding: 30px;
+  width: 100%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+  padding: 0px 25px 0px 25px;
+  border-right: 1px solid #dddddd;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+a:link {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  color: #777777;
+  text-decoration: none;
+}
+a:visited {
+  color: #4aaaa5;
+}
+a:hover {
+  color: #ffce6e;
+}
 main {
   widows: 960px;
   margin: 50px;
@@ -11,6 +45,12 @@ h1 {
 }
 h2 {
   text-align: center;
+}
+aside {
+  border: #222;
+  widows: 400px;
+  height: 400px;
+  border-style: solid;
 }
 #blanks {
   text-align: right;
