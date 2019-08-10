@@ -74,6 +74,12 @@ document.onkeyup = function(event) {
       guessRemain--;
       guessElement.innerHTML = "Remaining Guesses: " + guessRemain;
     }
+    if (guessRemain === 0) {
+      guessElement.textContent = "Remaining Guesses: " + guessRemain;
+      // prints message for loss
+      document.getElementById("lose").innerHTML =
+        "Sorry, you lose. Want to try another movie title?";
+    }
   }
 };
 
