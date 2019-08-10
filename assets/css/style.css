@@ -1,14 +1,23 @@
+main {
+  widows: 960px;
+  margin: 50px;
+  padding: 20px;
+}
 h1 {
   font-family: "Cinzel", serif;
   text-align: center;
   font-size: 36pt;
   color: navy;
 }
+h2 {
+  text-align: center;
+}
 #blanks {
-  text-align: left;
+  text-align: right;
   font-size: 24pt;
   font-family: "Handlee", cursive;
   color: #222;
+  padding-left: 200px;
 }
 #logo {
   width: 400px;
