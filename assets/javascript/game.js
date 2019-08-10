@@ -35,7 +35,11 @@ document.onkeyup = function(event) {
     // game starts
     // // start instruction goes away
     document.getElementById("start").style.visibility = "hidden";
-
+    document.getElementById("win").textContent = "";
+    document.getElementById("lose").textContent = "";
+    if (score > 0) {
+      guessRemain = 5;
+    }
     // words randomly choosen
     computerMovie = movies[Math.floor(Math.random() * movies.length)];
     console.log(computerMovie);
@@ -81,7 +85,7 @@ document.onkeyup = function(event) {
       guessElement.textContent = "Remaining Guesses: " + guessRemain;
       // prints message for loss
       document.getElementById("lose").innerHTML =
-        "Sorry, you lose. Want to try another movie title?";
+        'Sorry, you lose. Want to try another movie title? Press "Enter" to play again';
     }
     let solved = true;
     for (i = 0; i < answerArray.length; i++) {
@@ -96,12 +100,12 @@ document.onkeyup = function(event) {
       score++;
       console.log(guessRemain);
       console.log(solved);
-      scoreElement.textContent = "Score " + score;
+      scoreElement.textContent = "Score: " + score;
 
       // congratulate player and encourge them to continue
 
       document.getElementById("win").textContent =
-        "You solved it! Can you beat them all?";
+        'You solved it! Can you beat them all? Press "Enter" to play again';
     }
     if (score == movies.length) {
       //       // print celebratory text
