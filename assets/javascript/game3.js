@@ -13,6 +13,7 @@ const movies = [
   "how to train your dragon",
   "home"
 ];
+// defining varable
 let computerMovie = "";
 let answerArray = [];
 let guessRemain = 5;
@@ -42,6 +43,9 @@ document.onkeyup = function(event) {
     // the array of blank spaces that will be filled will _ where movies letters would be
     for (let index = 0; index < computerMovie.length; index++) {
       answerArray[index] = "_";
+      if ((computerMovie[index] = " ")) {
+        answerArray[index] = " ";
+      }
       // console.log(answerArray);
     }
     document.getElementById("blanks").textContent = answerArray.join(" ");
@@ -55,7 +59,7 @@ document.onkeyup = function(event) {
     console.log(keypress);
 
     // Display starting amount of guesses
-    // guessElement.textContent = "Remaining Gesses: " + guessRemain;
+
     // let remainingLetters = answerArray.length;
     for (let key = 0; key < answerArray.length; key++) {
       // if user choice is correct
@@ -63,7 +67,7 @@ document.onkeyup = function(event) {
         guessKey = true;
         answerArray[key] = keypress;
         // remainingLetters--;
-        // console.log(remainingLetters);
+        console.log(answerArray);
 
         //Lets us know letter chosen was correct
         blanksElement.textContent = answerArray.join(" ");
@@ -79,6 +83,27 @@ document.onkeyup = function(event) {
       // prints message for loss
       document.getElementById("lose").innerHTML =
         "Sorry, you lose. Want to try another movie title?";
+    }
+    let solved = true;
+    for (i = 0; i < answerArray.length; i++) {
+      if (answerArray[i] === "_") {
+        solved = false;
+      }
+    }
+    if (solved && guessRemain > 0) {
+      // increase score by 1 (for 1 full word spelled)
+      score++;
+      // prints score to screen
+      scoreElement.textContent = "Score " + score;
+
+      // congratulate player and encourge them to continue
+
+      document.getElementById("win").textContent =
+        "You solved it! Can you beat them all?";
+    }
+    if (score == movies.length) {
+      //       // print celebratory text
+      document.getElementById("win").textContent = "YOU BEAT THEM ALL!";
     }
   }
 };
