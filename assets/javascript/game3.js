@@ -19,6 +19,7 @@ let answerArray = [];
 let guessRemain = 5;
 const acceptableInputs = "qwertyuioplkjhgfdsazxcvbnm &";
 // game starts on key up
+let score = 0;
 document.onkeyup = function(event) {
   // defining elements and things
   const blanksElement = document.getElementById("blanks");
@@ -29,7 +30,6 @@ document.onkeyup = function(event) {
   // define event key
   const keypress = event.key;
   // let guessRemain;
-  let score = 0;
   // score variable
   if (keypress === "Enter") {
     // game starts
@@ -39,14 +39,13 @@ document.onkeyup = function(event) {
     // words randomly choosen
     computerMovie = movies[Math.floor(Math.random() * movies.length)];
     console.log(computerMovie);
-
+    answerArray.length = 0;
     // the array of blank spaces that will be filled will _ where movies letters would be
     for (let index = 0; index < computerMovie.length; index++) {
       answerArray[index] = "_";
-      if ((computerMovie[index] = " ")) {
-        answerArray[index] = " ";
-      }
-      // console.log(answerArray);
+      // if ((computerMovie[index] = " ")) {
+      //   answerArray[index] = " ";
+      // }
     }
     document.getElementById("blanks").textContent = answerArray.join(" ");
 
@@ -88,12 +87,15 @@ document.onkeyup = function(event) {
     for (i = 0; i < answerArray.length; i++) {
       if (answerArray[i] === "_") {
         solved = false;
+        score = score;
       }
     }
     if (solved && guessRemain > 0) {
       // increase score by 1 (for 1 full word spelled)
-      score++;
       // prints score to screen
+      score++;
+      console.log(guessRemain);
+      console.log(solved);
       scoreElement.textContent = "Score " + score;
 
       // congratulate player and encourge them to continue
@@ -107,5 +109,3 @@ document.onkeyup = function(event) {
     }
   }
 };
-
-console.log(guessRemain);
