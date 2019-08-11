@@ -37,9 +37,14 @@ document.onkeyup = function(event) {
     document.getElementById("start").style.visibility = "hidden";
     document.getElementById("win").textContent = "";
     document.getElementById("lose").textContent = "";
-    if (score > 0) {
+    document.getElementById("userguess").textContent = "";
+    if ((guessRemain = 0)) {
+      score = 0;
+    }
+    if (score >= 0) {
       guessRemain = 5;
     }
+
     // words randomly choosen
     computerMovie = movies[Math.floor(Math.random() * movies.length)];
     console.log(computerMovie);
