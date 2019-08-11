@@ -80,6 +80,8 @@ document.onkeyup = function(event) {
     if (!guessKey) {
       guessRemain--;
       guessElement.innerHTML = "Remaining Guesses: " + guessRemain;
+      document.getElementById("userguess").textContent =
+        "Wrong Letter: " + keypress;
     }
     if (guessRemain === 0) {
       guessElement.textContent = "Remaining Guesses: " + guessRemain;
