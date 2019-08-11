@@ -56,51 +56,55 @@ h2 {
 }
 aside {
   width: 550px;
-  height: 300px;
+  height: 350px;
   border-style: solid;
   padding: 50px;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 550px;
 }
+p {
+  margin: 5px;
+}
 #blanks {
   text-align: center;
   font-size: 24pt;
   font-family: "Handlee", cursive;
   color: #222;
+  padding-bottom: 0;
 }
-#userGuess {
+#userguess {
   text-align: left;
   font-size: 18pt;
   font-family: "Handlee", cursive;
   color: #222;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 20px 5px 20px;
 }
 #wguess {
   text-align: left;
   font-size: 18pt;
   font-family: "Handlee", cursive;
   color: #222;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 20px 5px 20px;
 }
 #score {
   text-align: left;
   font-size: 18pt;
   font-family: "Handlee", cursive;
   color: #222;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 20px 5px 20px;
 }
 #win {
   text-align: center;
   font-size: 18pt;
   font-family: "Handlee", cursive;
   color: #222;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 20px 5px 20px;
 }
 #lose {
   text-align: center;
   font-size: 18pt;
   font-family: "Handlee", cursive;
   color: #222;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 20px 5px 20px;
 }
