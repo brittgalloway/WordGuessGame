@@ -57,7 +57,8 @@ h2 {
 aside {
   width: 550px;
   height: 350px;
-  border-style: solid;
+  border-style: double;
+  border-color: navy;
   padding: 50px;
   margin-top: auto;
   margin-bottom: auto;
