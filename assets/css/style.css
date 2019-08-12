@@ -1,4 +1,12 @@
 /* nav bar to mimic the other pages in basic portfolio */
+header {
+  background: #fff;
+  border-bottom: solid;
+  border-bottom-width: 100%;
+  border-color: #cccccc;
+  height: 77px;
+  width: 100%;
+}
 nav {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   color: #777777;
