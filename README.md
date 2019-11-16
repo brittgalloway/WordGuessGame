@@ -1,4 +1,4 @@
-This is a Word Guessing Game.<br>
+This is a Word Guessing Game made with Javascript.<br>
 The theme is DreamWorks movie titles.<br>
 To press "enter" to start.<br>
 A series of \_ will appear and you can begin to guess letters.<br>
